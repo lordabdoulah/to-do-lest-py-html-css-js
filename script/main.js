@@ -157,7 +157,6 @@ function OnclickAction() {
 
     let task_input = document.querySelector(".mainddiv .content form input");
     let task_text = task_input.value;
-    if (task_text.l)
     if (task_text.length > 3) {
         if (list_of_taskes.indexOf(task_text) !== -1) {
             console.log("موجد بالفعل")
