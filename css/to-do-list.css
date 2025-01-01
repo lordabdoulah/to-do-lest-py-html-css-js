@@ -96,7 +96,7 @@ h1 img{
     align-items: center;
     justify-content: space-between;
     border-radius: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 12px;
 }
 .mainddiv .content form input{
     flex-grow: 1;
@@ -117,6 +117,14 @@ h1 img{
     height: 40px;
     padding: 0px 20px;
     border-radius: 12px;
+}
+.mainddiv .content .note{
+    color: var(--main-color);
+    transition: var(--transition-deu);
+    font-size: medium;
+    text-align: center;
+    margin-bottom: 80px;
+    opacity: 0;
 }
 .mainddiv .content .row{
     padding: 20px;
