@@ -157,16 +157,20 @@ function OnclickAction() {
 
     let task_input = document.querySelector(".mainddiv .content form input");
     let task_text = task_input.value;
+    if (task_text.l)
+    if (task_text.length > 3) {
+        if (list_of_taskes.indexOf(task_text) !== -1) {
+            console.log("موجد بالفعل")
+        } else {
+            // إضافة المهمة الجديدة وتخزينها
+            list_of_taskes.push(task_text);
+            saveArrayToLocalStorage(list_of_taskes, "data");
+            ceation(task_text, list_of_taskes);
 
-    if (list_of_taskes.indexOf(task_text) !== -1) {
-        // المهمة موجودة بالفعل
-    } else {
-        // إضافة المهمة الجديدة وتخزينها
-        list_of_taskes.push(task_text);
-        saveArrayToLocalStorage(list_of_taskes, "data");
-        ceation(task_text, list_of_taskes);
-
-        // مسح النص من حقل الإدخال بعد إضافة المهمة
-        task_input.value = "";
-    }  
+            // مسح النص من حقل الإدخال بعد إضافة المهمة
+            task_input.value = "";
+        } 
+    }else{
+        console.log("اقل عدد احرف 3")
+    } 
 }
