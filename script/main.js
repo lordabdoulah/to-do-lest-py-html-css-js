@@ -149,6 +149,8 @@ function start() {
 }
 start();
 
+let length_note = 0
+let was_note = 0
 // دالة للتعامل مع إضافة مهمة جديدة
 function OnclickAction() {
     let list_of_taskes = getArrayFromLocalStorage("data");
@@ -157,10 +159,20 @@ function OnclickAction() {
 
     let task_input = document.querySelector(".mainddiv .content form input");
     let task_text = task_input.value;
+    let note = document.querySelector(".mainddiv .content .note")
     if (task_text.length > 3) {
         if (list_of_taskes.indexOf(task_text) !== -1) {
-            console.log("موجد بالفعل")
+            if (was_note === 0){
+                note.appendChild(document.createTextNode("المهمه موجوده بالفعل في القائمه يمكنك محاولة اضافة مهمه اخرى"))
+                note.style.opacity =1
+                was_note = 1   
+            }
+
         } else {
+            was_note = 0 
+            length_note = 0
+            note.style.opacity = 0
+            note.textContent = ""
             // إضافة المهمة الجديدة وتخزينها
             list_of_taskes.push(task_text);
             saveArrayToLocalStorage(list_of_taskes, "data");
@@ -170,6 +182,11 @@ function OnclickAction() {
             task_input.value = "";
         } 
     }else{
-        console.log("اقل عدد احرف 3")
+        if (length_note === 0) {
+            note.appendChild(document.createTextNode("ادخل نص من فضلك لا يقل عن 3 احرف"))
+            note.style.opacity =1 
+            length_note = 1 
+        }
+
     } 
 }
