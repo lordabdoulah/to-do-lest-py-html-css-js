@@ -163,7 +163,7 @@ function OnclickAction() {
     if (task_text.length > 3) {
         if (list_of_taskes.indexOf(task_text) !== -1) {
             if (was_note === 0){
-                note.appendChild(document.createTextNode("المهمه موجوده بالفعل في القائمه يمكنك محاولة اضافة مهمه اخرى"))
+                note.appendChild(document.createTextNode(" المهمه موجوده بالفعل في القائمه يمكنك محاولة اضافة مهمه اخرى"))
                 note.style.opacity =1
                 was_note = 1   
             }
@@ -183,7 +183,7 @@ function OnclickAction() {
         } 
     }else{
         if (length_note === 0) {
-            note.appendChild(document.createTextNode("ادخل نص من فضلك لا يقل عن 3 احرف"))
+            note.appendChild(document.createTextNode(" ادخل نص من فضلك لا يقل عن 3 احرف"))
             note.style.opacity =1 
             length_note = 1 
         }
