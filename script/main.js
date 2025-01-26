@@ -620,13 +620,10 @@ function main_delet(self) {
 }
 
 
-window.onload = function () {
-    ReloadTasks();
-    // createComplexTask("feacktask 1", ["task1", "task2", "task3"])
-    // createComplexTask("feacktask 2", ["task1", "task2", "task3"])
-        document.querySelector(".version").innerHTML = `v ${version}`
+ReloadTasks();
+document.querySelector(".version").innerHTML = `v ${version}`
 
-}
+
 
 
 
