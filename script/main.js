@@ -1,6 +1,6 @@
 // الاعدادات العامه
 const task_storage_key = "data";              // اسم المتغير الذي سوف يحتوي على قائمة المهام
-const mintask_length = 5;                   // الحد الأدنى لطول المهام  
+const mintask_length = 2;                   // الحد الأدنى لطول المهام  
 let mode_stat = 1                           // مركب وغير مركب                  1 تعني عادي
 let was_note = 0
 let length_note = 0
