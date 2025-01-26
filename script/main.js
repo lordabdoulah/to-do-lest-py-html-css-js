@@ -619,15 +619,10 @@ function main_delet(self) {
     // تحديث قائمة المهام بعد حذف المهمة                                        ***********************     
     // console.log("removing ...")
 }
+ReloadTasks();
+document.querySelector(".version").innerHTML = `v ${version}`
 
 
-window.onload = function () {
-    ReloadTasks();
-    // createComplexTask("feacktask 1", ["task1", "task2", "task3"])
-    // createComplexTask("feacktask 2", ["task1", "task2", "task3"])
-        document.querySelector(".version").innerHTML = `v ${version}`
-
-}
 
 
 
