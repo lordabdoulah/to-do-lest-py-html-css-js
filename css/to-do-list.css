@@ -418,6 +418,7 @@ h1 img{
     }
     .mainddiv .content .myrow .lup button {
         margin-right: 0;
+        padding: 2px 5px;
     }
     .mainddiv .content .myrow .lup .delet {
         margin-right: 5px;
@@ -435,6 +436,12 @@ h1 img{
     .mainddiv .content .myrow .lup button {
         padding: 2px 5px;
     }
+    .smale-taskes{
+        max-width: 100%;
+    }
+    .version{
+        font-size: 14px;
+    }
 }
 
 
@@ -451,18 +458,9 @@ h1 img{
     justify-content: center;
     position: relative;
 }
-/* .duone::before{
-    content: '';
-    border: solid 10px;
-    border-color: var(--main-color) transparent transparent transparent;
-    position: absolute;
-    top: calc(50% + 5px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 .version{
-    position: absolute;
-    bottom: 10px;
+    position: fixed;
+    top: 28px;
     left: 20px;
     color: #777777;
     width: fit-content;
