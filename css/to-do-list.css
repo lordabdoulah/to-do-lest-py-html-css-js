@@ -278,7 +278,7 @@ h1 img{
 }
 .mainddiv .content .myrow .lup p{
     flex-grow: 1;
-    padding-left: 20px;
+    padding: 2px  2px 2px 20px;
     transition: var(--transition-deu);
     max-width: calc(100% - 131px);
     overflow-x: auto;
@@ -437,6 +437,7 @@ h1 img{
         padding: 2px 5px;
     }
     .smale-taskes{
+        width:  100%;
         max-width: 100%;
     }
     .version{
