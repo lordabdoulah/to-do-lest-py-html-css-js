@@ -280,6 +280,7 @@ function OnclickAction() {
         small_taskes.forEach(element => {
             if (check_task(element.value)) {
                 small_taskes_text.push(element.value)
+                element.value = ""
             }else{
                 return false
             }
