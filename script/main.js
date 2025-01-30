@@ -1,6 +1,6 @@
 // الاعدادات العامه
 const task_storage_key = "data";              // اسم المتغير الذي سوف يحتوي على قائمة المهام
-const mintask_length = 5;                   // الحد الأدنى لطول المهام  
+const mintask_length = 3;                   // الحد الأدنى لطول المهام  
 let mode_stat = 1                           // مركب وغير مركب                  1 تعني عادي
 let was_note = 0
 let length_note = 0
@@ -44,7 +44,12 @@ let vtext = `---
 ازاي اخلي الرموز تظهر في الصفحه.... 
 
 `
-
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch((err) => console.log("Service Worker Failed:", err));
+  }
+  
 
 
 // العناصر الي هستخدمها علطول
@@ -280,6 +285,7 @@ function OnclickAction() {
         small_taskes.forEach(element => {
             if (check_task(element.value)) {
                 small_taskes_text.push(element.value)
+                element.value = ""
             }else{
                 return false
             }
@@ -622,7 +628,7 @@ function main_delet(self) {
 
 ReloadTasks();
 document.querySelector(".version").innerHTML = `v ${version}`
-
+// document.querySelector(".advanced").addEventListener("click", function () {
 
 
 
